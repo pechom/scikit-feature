@@ -1,32 +1,6 @@
+changes in this fork:
 
-[![PyPI version](https://badge.fury.io/py/skfeature-chappers.svg)](https://badge.fury.io/py/skfeature-chappers) [![CircleCI](https://circleci.com/gh/chappers/scikit-feature.svg?style=svg)](https://circleci.com/gh/chappers/scikit-feature)
+CFS now ends, when it's subset has number of features stated in new treshold parameter. Features with zero division in merit calculation (zero entropy) have it's error catched and are excluded from final set.
 
-`scikit-feature` is an open-source (GNU General Public License v2.0) feature selection repository in Python developed by Data Mining and Machine Learning Lab at Arizona State University. 
-
-It serves as a platform for facilitating feature selection application, research and comparative study. It is designed to share widely used feature selection algorithms developed in the feature selection research, and offer convenience for researchers and practitioners to perform empirical evaluation in developing new feature selection algorithms.
-
-This is may or may not be a temporary fork of the original repository as development seems to have stalled and various modules have be depreciated due to updates to `scikit-learn`. I will see if should get reintegrated back into the original project if it ever gets revived again. 
-
-**Forked project information**
-
-*  Project site - https://github.com/chappers/scikit-feature
-
-**Original `scikit-feature` project information**
-
-*  Project site - https://github.com/jundongl/scikit-feature
-*  Documentation - http://featureselection.asu.edu/
-
-Installation
-============
-
-# From Sources
-
-*  Unpack the source package somewhere
-*  Run `python setup.py install` from the source distribution's top level folder
-
-# From pip
-
-```sh
-pip install skfeature-chappers
-```
+Gini index values are initialized with value of 1, not 0.5 (0.5 not usable when you have more than 2 classes).
 
