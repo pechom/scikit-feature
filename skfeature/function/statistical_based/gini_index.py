@@ -1,7 +1,7 @@
 import numpy as np
 from skfeature.utility.util import reverse_argsort
 
-def gini_index(X, y, mode="rank"):
+def gini_index(X, y, mode="index"):
     """
     This function implements the gini index feature selection.
 
@@ -27,8 +27,8 @@ def gini_index(X, y, mode="rank"):
 
     n_samples, n_features = X.shape
 
-    # initialize gini_index for all features to be 0.5
-    gini = np.ones(n_features) * 0.5
+    # initialize gini_index for all features to be 1
+    gini = np.ones(n_features) * 1
 
     # For i-th feature we define fi = x[:,i] ,v include all unique values in fi
     for i in range(n_features):
