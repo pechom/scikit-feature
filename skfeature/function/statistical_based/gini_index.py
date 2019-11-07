@@ -28,7 +28,7 @@ def gini_index(X, y, mode="index"):
     n_samples, n_features = X.shape
 
     # initialize gini_index for all features to be 1
-    gini = np.ones(n_features) * 1
+    gini = np.ones(n_features)
 
     # For i-th feature we define fi = x[:,i] ,v include all unique values in fi
     for i in range(n_features):
