@@ -45,7 +45,7 @@ def similarity_regression(X, y, n_neighbors=None):
     nbrs = NearestNeighbors(n_neighbors=n_neighbors, algorithm='auto').fit(y_)
     return np.multiply(nbrs.kneighbors_graph(y_).toarray(), rbf_kernel(X, gamma=1))
 
-def spec(X, y=None, mode='rank', **kwargs):
+def spec(X, y, mode='rank', **kwargs):
     """
     This function implements the SPEC feature selection
 
