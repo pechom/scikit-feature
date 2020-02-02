@@ -4,5 +4,5 @@ CFS now ends, when its subset has number of features stated in new treshold para
 
 Gini index values are initialized with value of 1, not 0.5 (0.5 not usable when you have more than 2 classes).
 
-Laplacian score uses supervised version by default.
+Laplacian score and SPEC uses supervised version by default.
 
